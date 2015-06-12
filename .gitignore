@@ -1,0 +1,12 @@
+*.log
+*.pot
+*.pyc
+local_settings.py
+# virtualenv related
+.Python
+bin/
+include/
+lib/
+pip-selfcheck.json
+**/upload/database/database.sqlite3
+**/upload/media/documents/**

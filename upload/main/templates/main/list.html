@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		html, body {
+    		height: 100%;
+		}
+		html {
+    		display: table;
+    		margin: auto;
+		}
+		body {
+    		display: table-cell;
+    		vertical-align: middle;
+		}
+		</style>
+		<meta charset="utf-8">
+		<title>File Upload</title>	
+	</head>
+
+	<body>
+		<form action="{% url "list" %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			
+			<p>{{ form.name.label_tag }} {{ form.name }} {% if form.name.errors %} Please enter a name {% endif %}</p> 
+			<p>{{ form.docfile.label_tag }} {{ form.docfile }} {% if form.docfile.errors %} Please select a valid file {% endif %}</p>
+			<p><input type="submit" value="Upload" /></p>
+		</form>
+		
+	</body>
+
+</html> 
